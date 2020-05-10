@@ -1,10 +1,10 @@
 html, body, canvas {
     margin: 0px;
     padding: 0px;
+    /* Stop the tapping from doing zoom actions */
+    touch-action: none;
 }
 
 #glCanvas {
     display:block;
-    /* Stop the tapping from doing zoom actions */
-    touch-action: manipulation;
 }
