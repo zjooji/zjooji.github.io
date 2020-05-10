@@ -127,7 +127,9 @@ function run() {
         // There is some inexplicable jitter/tearing that's happening using this drawing method
         // I tried stepping a frame at a time pausing before the clearRect was called and still
         // saw it appear so it might be some kind of graphics card driver issue or something
-        ctxt.clearRect(0, 0, 1000, 1000);
+        canvas.width = window.innerWidth;
+        canvas.height = window.innerHeight;
+        ctxt.clearRect(0, 0, window.innerWidth, window.innerHeight);
         person.draw(ctxt);
         for (var i = 0; i < buttons.length; i++) {
             var button = buttons[i];
