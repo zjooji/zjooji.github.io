@@ -121,12 +121,20 @@ function run() {
     var yOffset = objectSize / 2;
     var xOffset = objectSize / 2;
 
+    function selectNextHandler(assetType: AssetType) {
+        return function(e: MouseEvent) {
+            var assetName = AssetType[assetType];
+            person[assetName] = (person[assetName] + 1) % repository.numAssets(assetType);
+            e.preventDefault();
+        }
+    }
+
     var person = new Person(0, 0, 0, 0, 0, 0);
     var buttons = [
-        new RectButton(700, 200, 60, 40, function(MouseEvent) {person.hat = (person.hat + 1) % repository.numAssets(AssetType.hat)}),
+        new RectButton(700, 200, 60, 40, selectNextHandler(AssetType.hat)),
         //new RectButton(700, 250, 60, 40, function(MouseEvent) {person.hair = (person.hair + 1) % repository.numAssets(AssetType.hair)}),
-        new RectButton(700, 300, 60, 40, function(MouseEvent) {person.eyes = (person.eyes + 1) % repository.numAssets(AssetType.eyes)}),
-        new RectButton(700, 350, 60, 40, function(MouseEvent) {person.mouth = (person.mouth + 1) % repository.numAssets(AssetType.mouth)}),
+        new RectButton(700, 300, 60, 40, selectNextHandler(AssetType.eyes)),
+        new RectButton(700, 350, 60, 40, selectNextHandler(AssetType.mouth)),
         //new RectButton(700, 400, 60, 40, function(MouseEvent) {person.head = (person.head + 1) % repository.numAssets(AssetType.head)}),
         //new RectButton(700, 500, 60, 40, function(MouseEvent) {person.body = (person.body + 1) % repository.numAssets(AssetType.body)})
     ]
