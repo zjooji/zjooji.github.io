@@ -103,7 +103,6 @@ function run() {
         return function (e) {
             var assetName = AssetType[assetType];
             person[assetName] = (person[assetName] + 1) % repository.numAssets(assetType);
-            e.preventDefault();
         };
     }
     var person = new Person(0, 0, 0, 0, 0, 0);

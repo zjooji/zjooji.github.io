@@ -5,4 +5,6 @@ html, body, canvas {
 
 #glCanvas {
     display:block;
+    /* Stop the tapping from doing zoom actions */
+    touch-action: manipulation;
 }

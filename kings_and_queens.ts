@@ -125,7 +125,6 @@ function run() {
         return function(e: MouseEvent) {
             var assetName = AssetType[assetType];
             person[assetName] = (person[assetName] + 1) % repository.numAssets(assetType);
-            e.preventDefault();
         }
     }
 
