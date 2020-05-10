@@ -107,10 +107,10 @@ function run() {
     }
     var person = new Person(0, 0, 0, 0, 0, 0);
     var buttons = [
-        new RectButton(700, 200, 60, 40, selectNextHandler(AssetType.hat)),
+        new RectButton(700, 110, 80, 60, selectNextHandler(AssetType.hat)),
         //new RectButton(700, 250, 60, 40, function(MouseEvent) {person.hair = (person.hair + 1) % repository.numAssets(AssetType.hair)}),
-        new RectButton(700, 300, 60, 40, selectNextHandler(AssetType.eyes)),
-        new RectButton(700, 350, 60, 40, selectNextHandler(AssetType.mouth)),
+        new RectButton(700, 240, 80, 60, selectNextHandler(AssetType.eyes)),
+        new RectButton(700, 340, 80, 60, selectNextHandler(AssetType.mouth)),
     ];
     canvas.onclick = function (e) {
         // TODO: if the canvas moves for some reason, will have to make these coordinates work

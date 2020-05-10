@@ -130,10 +130,10 @@ function run() {
 
     var person = new Person(0, 0, 0, 0, 0, 0);
     var buttons = [
-        new RectButton(700, 200, 60, 40, selectNextHandler(AssetType.hat)),
+        new RectButton(700, 110, 80, 60, selectNextHandler(AssetType.hat)),
         //new RectButton(700, 250, 60, 40, function(MouseEvent) {person.hair = (person.hair + 1) % repository.numAssets(AssetType.hair)}),
-        new RectButton(700, 300, 60, 40, selectNextHandler(AssetType.eyes)),
-        new RectButton(700, 350, 60, 40, selectNextHandler(AssetType.mouth)),
+        new RectButton(700, 240, 80, 60, selectNextHandler(AssetType.eyes)),
+        new RectButton(700, 340, 80, 60, selectNextHandler(AssetType.mouth)),
         //new RectButton(700, 400, 60, 40, function(MouseEvent) {person.head = (person.head + 1) % repository.numAssets(AssetType.head)}),
         //new RectButton(700, 500, 60, 40, function(MouseEvent) {person.body = (person.body + 1) % repository.numAssets(AssetType.body)})
     ]
